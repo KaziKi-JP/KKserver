@@ -5,20 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Minecraft サーバー紹介</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
 <style>
+/* ========= Base ========= */
 body {
+  margin: 0;
   font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background: #f5f7fa;
-  margin: 0;
   color: #333;
+  line-height: 1.6;
+}
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 
-main {
-  margin-top: 83px; /* ヘッダー固定分 */
-}
-
-/* ヘッダー */
+/* ========= Header (kaziki-jp風) ========= */
 header {
   position: fixed;
   top: 0;
@@ -28,6 +32,7 @@ header {
   padding: 18px 28px 14px;
   border-bottom: 1px solid #e3e5e8;
   z-index: 50;
+  text-align: center;
 }
 header h1 {
   margin: 0;
@@ -40,58 +45,53 @@ header p {
   color: #666;
 }
 
-/* カードコンテナ */
+/* ========= Container ========= */
 .container {
-  max-width: 780px;
-  margin: 40px auto;
-  padding: 0 20px;
+  max-width: 900px;
+  margin: 100px auto 40px;
+  padding: 0 16px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
 }
 
-/* カードデザイン */
+/* ========= Card (meanoniwa風) ========= */
 .card {
   background: #fff;
   border-radius: 12px;
-  border: 1px solid #e3e5e8;
-  padding: 22px 28px;
-  box-shadow:
-    0 2px 6px rgba(0,0,0,0.06),
-    0 6px 12px rgba(0,0,0,0.03);
-  opacity: 0;
-  transform: translateY(8px);
-  animation: fadeSlide 0.6s ease-out forwards;
+  padding: 24px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
 }
-
-@keyframes fadeSlide {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .card h2 {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 18px;
-  font-weight: 600;
+  gap: 8px;
   margin-top: 0;
+  font-size: 1.4rem;
+  color: #222;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 16px 0;
 }
 
-/* アコーディオン */
+/* ========= Accordion ========= */
 .accordion {
-  background: #f5f7fa;
-  cursor: pointer;
+  width: 100%;
   padding: 14px 20px;
-  margin-bottom: 5px;
-  border-radius: 8px;
+  background: #f5f7fa;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 6px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: 600;
-  font-size: 15px;
+  margin-top: 12px;
 }
 .accordion i {
   transition: transform 0.3s;
@@ -99,20 +99,21 @@ header p {
 .accordion.active i {
   transform: rotate(180deg);
 }
-.panel {
+.accordion + .panel {
   display: none;
-  padding: 0 20px 15px;
+  padding: 12px 20px;
   background: #fff;
-  border-radius: 8px;
-  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #eaeaea;
+  margin-top: 4px;
 }
 
-/* ギャラリー */
+/* ========= Gallery ========= */
 .slider {
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
-  margin-top: 15px;
+  border-radius: 8px;
+  margin-top: 16px;
 }
 .slides {
   display: flex;
@@ -121,7 +122,7 @@ header p {
 .slides img {
   width: 100%;
   flex-shrink: 0;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 .prev, .next {
   position: absolute;
@@ -130,41 +131,44 @@ header p {
   background: rgba(0,0,0,0.3);
   border: none;
   color: #fff;
-  font-size: 1.5em;
-  padding: 8px;
-  cursor: pointer;
+  padding: 6px 10px;
   border-radius: 50%;
-  z-index: 10;
+  cursor: pointer;
+  font-size: 1.2rem;
 }
-.prev:hover, .next:hover {
-  background: rgba(0,0,0,0.5);
-}
-.prev { left: 10px; }
-.next { right: 10px; }
+.prev:hover, .next:hover { background: rgba(0,0,0,0.5); }
 
-/* レスポンシブ */
+/* ========= Button ========= */
+.button {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #007acc;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+.button:hover { background: #005fa3; }
+
+/* ========= Responsive ========= */
 @media (max-width: 600px) {
-  .container {
-    padding: 0 10px;
-  }
-  .accordion { font-size: 14px; }
-  .card { padding: 20px; }
+  .container { padding: 16px 12px; margin-top: 120px; }
+  header h1 { font-size: 1.8rem; }
 }
 </style>
 </head>
-
 <body>
+
 <header>
   <h1>My Minecraft Server</h1>
   <p>楽しいマルチプレイサーバーへようこそ！</p>
 </header>
 
-<main>
 <div class="container">
 
   <!-- サーバーバナー -->
   <div class="card">
-    <img src="https://via.placeholder.com/780x250?text=Server+Banner" alt="サーバーバナー" style="width:100%; border-radius:12px;">
+    <img src="https://via.placeholder.com/900x300?text=Server+Banner" alt="サーバーバナー">
   </div>
 
   <!-- サーバー情報 -->
@@ -174,8 +178,8 @@ header p {
       <li>サーバーIP: <strong>play.example.com</strong></li>
       <li>バージョン: <strong>1.20.1</strong></li>
       <li>モード: <strong>サバイバル / クリエイティブ</strong></li>
-      <li>対応人数: <strong>最大100人</strong></li>
-      <li>公式Discord: <a href="#">参加はこちら</a></li>
+      <li>最大プレイヤー数: <strong>100人</strong></li>
+      <li>公式 Discord: <a href="#">参加はこちら</a></li>
     </ul>
   </div>
 
@@ -184,9 +188,9 @@ header p {
     <h2><i class="fas fa-star"></i> 特徴</h2>
     <ul>
       <li>自由に建築可能なワールド</li>
-      <li>定期イベントやミニゲームあり</li>
-      <li>初心者向けサポート体制完備</li>
-      <li>独自プラグインで快適なプレイ環境</li>
+      <li>定期イベントあり</li>
+      <li>初心者歓迎・サポート体制あり</li>
+      <li>快適なプレイ環境（プラグイン導入）</li>
     </ul>
   </div>
 
@@ -195,9 +199,9 @@ header p {
     <h2><i class="fas fa-images"></i> サーバーギャラリー</h2>
     <div class="slider">
       <div class="slides">
-        <img src="https://via.placeholder.com/780x300?text=Screenshot+1" alt="スクリーンショット1">
-        <img src="https://via.placeholder.com/780x300?text=Screenshot+2" alt="スクリーンショット2">
-        <img src="https://via.placeholder.com/780x300?text=Screenshot+3" alt="スクリーンショット3">
+        <img src="https://via.placeholder.com/900x300?text=Screenshot+1" alt="スクリーンショット1">
+        <img src="https://via.placeholder.com/900x300?text=Screenshot+2" alt="スクリーンショット2">
+        <img src="https://via.placeholder.com/900x300?text=Screenshot+3" alt="スクリーンショット3">
       </div>
       <button class="prev"><i class="fas fa-chevron-left"></i></button>
       <button class="next"><i class="fas fa-chevron-right"></i></button>
@@ -211,66 +215,65 @@ header p {
     <button class="accordion">PC版 <i class="fas fa-chevron-down"></i></button>
     <div class="panel">
       <ul>
-        <li>1. Minecraftを起動<br><img src="https://via.placeholder.com/780x200?text=PC+Step+1" alt="PC Step 1"></li>
-        <li>2. マルチプレイ → サーバーを追加<br><img src="https://via.placeholder.com/780x200?text=PC+Step+2" alt="PC Step 2"></li>
-        <li>3. IPを入力: <strong>play.example.com</strong><br><img src="https://via.placeholder.com/780x200?text=PC+Step+3" alt="PC Step 3"></li>
+        <li>Minecraft を起動</li>
+        <li>マルチプレイ → サーバーを追加</li>
+        <li>IP: <strong>play.example.com</strong></li>
       </ul>
     </div>
 
     <button class="accordion">ゲーム機版 <i class="fas fa-chevron-down"></i></button>
     <div class="panel">
       <ul>
-        <li>1. Minecraftを起動<br><img src="https://via.placeholder.com/780x200?text=Console+Step+1" alt="Console Step 1"></li>
-        <li>2. サーバーを追加<br><img src="https://via.placeholder.com/780x200?text=Console+Step+2" alt="Console Step 2"></li>
+        <li>Minecraft を起動</li>
+        <li>サーバーを追加 → IP を入力</li>
       </ul>
     </div>
 
   </div>
 
-  <!-- サーバー製作所 -->
+  <!-- 製作所プロフィール -->
   <div class="card">
-    <h2><i class="fas fa-users"></i> サーバー製作所プロフィール</h2>
+    <h2><i class="fas fa-users"></i> 製作所プロフィール</h2>
     <div style="display:flex; gap:20px; flex-wrap:wrap;">
       <div style="flex:1 1 200px; text-align:center;">
-        <img src="https://via.placeholder.com/150" alt="メンバー1" style="border-radius:50%; margin-bottom:10px;">
-        <h3>メンバー1</h3>
-        <p>サーバー管理者 / 建築担当</p>
+        <img src="https://via.placeholder.com/120" alt="メンバー1" style="border-radius:50%; margin-bottom:10px;">
+        <h3>Member1</h3>
+        <p>サーバー管理 / 建築</p>
+      </div>
+      <div style="flex:1 1 200px; text-align:center;">
+        <img src="https://via.placeholder.com/120" alt="メンバー2" style="border-radius:50%; margin-bottom:10px;">
+        <h3>Member2</h3>
+        <p>プラグイン / 運営</p>
       </div>
     </div>
   </div>
 
 </div>
-</main>
 
 <script>
-// アコーディオン
-const acc = document.querySelectorAll('.accordion');
-acc.forEach(a => {
-  a.addEventListener('click', () => {
-    a.classList.toggle('active');
-    const panel = a.nextElementSibling;
-    panel.style.display = (panel.style.display === "block") ? "none" : "block";
+  // アコーディオン
+  document.querySelectorAll('.accordion').forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+      const panel = btn.nextElementSibling;
+      panel.style.display = (panel.style.display === "block") ? "none" : "block";
+    });
   });
-});
 
-// スライダー
-let slideIndex = 0;
-const slidesContainer = document.querySelector('.slides');
-const slides = document.querySelectorAll('.slides img');
-const totalSlides = slides.length;
-
-function updateSlider() {
-  const width = slides[0].clientWidth;
-  slidesContainer.style.transform = `translateX(-${slideIndex * width}px)`;
-}
-document.querySelector('.next').addEventListener('click', () => {
-  slideIndex = (slideIndex + 1) % totalSlides; updateSlider();
-});
-document.querySelector('.prev').addEventListener('click', () => {
-  slideIndex = (slideIndex - 1 + totalSlides) % totalSlides; updateSlider();
-});
-setInterval(() => { slideIndex = (slideIndex + 1) % totalSlides; updateSlider(); }, 4000);
-window.addEventListener('resize', updateSlider);
+  // スライダー
+  const slidesContainer = document.querySelector('.slides');
+  const slides = document.querySelectorAll('.slides img');
+  let index = 0;
+  const total = slides.length;
+  function updateSlider() {
+    const w = slides[0].clientWidth;
+    slidesContainer.style.transform = `translateX(-${index * w}px)`;
+  }
+  document.querySelector('.next').addEventListener('click', () => { index = (index +1)%total; updateSlider(); });
+  document.querySelector('.prev').addEventListener('click', () => { index = (index -1 + total)%total; updateSlider(); });
+  setInterval(()=>{ index = (index +1)%total; updateSlider(); }, 4000);
+  window.addEventListener('resize', updateSlider);
 </script>
+
 </body>
 </html>
