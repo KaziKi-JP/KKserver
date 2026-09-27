@@ -5,126 +5,121 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Minecraft サーバー紹介</title>
 <link rel="stylesheet" href="./style.css">
-
 </head>
 <body>
 
 <header>
-  <h1>KKserver</h1>
-  <span class="badge"> 開発中 </span>
-  <p>Minecraft paper server</p>
+  <div class="header-inner">
+    <a class="brand" href="#top" aria-label="KKserver トップ">
+      <span class="brand-mark" aria-hidden="true">K</span>
+      <span class="brand-copy">
+        <span class="brand-name"><h1>KKserver</h1><span class="badge">開発中</span></span>
+        <span class="brand-caption">MINECRAFT PAPER SERVER</span>
+      </span>
+    </a>
+    <nav class="header-nav" aria-label="ページ内ナビゲーション">
+      <a href="#server">サーバー</a>
+      <a href="#features">特徴</a>
+      <a href="#join">参加方法</a>
+      <a href="#team">運営</a>
+    </nav>
+  </div>
 </header>
 
-<div class="container">
-
-  <!-- サーバーバナー -->
-  <div class="card">
-    <img src="./banner.png" alt="サーバーバナー">
-  </div>
-
-  <!-- サーバー情報 -->
-  <div class="card">
-    <h2><i class="fas fa-info-circle"></i> サーバー情報</h2>
-    <ul>
-      <li>サーバーIP: <strong>play.example.com</strong></li>
-      <li>バージョン: <strong>1.20.1</strong></li>
-      <li>モード: <strong>サバイバル / クリエイティブ</strong></li>
-      <li>最大プレイヤー数: <strong>100人</strong></li>
-      <li>公式 Discord: <a href="#">参加はこちら</a></li>
-    </ul>
-  </div>
-
-  <!-- 特徴 -->
-  <div class="card">
-    <h2><i class="fas fa-star"></i> 特徴</h2>
-    <ul>
-      <li>自由に建築可能なワールド</li>
-      <li>定期イベントあり</li>
-      <li>初心者歓迎・サポート体制あり</li>
-      <li>快適なプレイ環境（プラグイン導入）</li>
-    </ul>
-  </div>
-
-  <!-- ギャラリー -->
-  <div class="card">
-    <h2><i class="fas fa-images"></i> サーバーギャラリー</h2>
-    <div class="slider">
-      <div class="slides">
-        <img src="https://via.placeholder.com/900x300?text=Screenshot+1" alt="スクリーンショット1">
-        <img src="https://via.placeholder.com/900x300?text=Screenshot+2" alt="スクリーンショット2">
-        <img src="https://via.placeholder.com/900x300?text=Screenshot+3" alt="スクリーンショット3">
+<main class="container" id="top">
+  <section class="panel panel--hero panel--left" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="live-dot"></span> COMMUNITY PAPER SERVER</p>
+      <h2 id="hero-title">遊ぶ場所を、<br>仲間とつくる。</h2>
+      <p class="hero-description">建築も冒険も、自分たちのペースで。KKserverで新しいワールドをはじめよう。</p>
+      <a class="hero-link" href="#join">参加方法を見る <span aria-hidden="true">↘</span></a>
+    </div>
+    <div class="world-visual" aria-label="KKserver ワールド情報">
+      <span class="world-label">WORLD / 01</span>
+      <div class="world-grid" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
       </div>
-      <button class="prev"><i class="fas fa-chevron-left"></i></button>
-      <button class="next"><i class="fas fa-chevron-right"></i></button>
+      <span class="world-caption">BUILD <i></i> EXPLORE <i></i> TOGETHER</span>
+      <span class="world-index">KK — 001</span>
     </div>
-  </div>
+    <span class="panel-index">01 <span>/</span> 05</span>
+  </section>
 
-  <!-- サーバー参加方法 -->
-  <div class="card">
-    <h2><i class="fas fa-gamepad"></i> サーバー参加方法</h2>
-
-    <button class="accordion">PC版 <i class="fas fa-chevron-down"></i></button>
-    <div class="panel">
-      <ul>
-        <li>Minecraft を起動</li>
-        <li>マルチプレイ → サーバーを追加</li>
-        <li>IP: <strong>play.example.com</strong></li>
-      </ul>
+  <section class="panel panel--right" id="server" aria-labelledby="server-title">
+    <div class="section-heading">
+      <p class="eyebrow">SERVER DETAILS <span>01</span></p>
+      <h2 id="server-title">サーバー情報</h2>
     </div>
-
-    <button class="accordion">ゲーム機版 <i class="fas fa-chevron-down"></i></button>
-    <div class="panel">
-      <ul>
-        <li>Minecraft を起動</li>
-        <li>サーバーを追加 → IP を入力</li>
-      </ul>
-    </div>
-
-  </div>
-
-  <!-- 製作所プロフィール -->
-  <div class="card">
-    <h2><i class="fas fa-users"></i> 製作所プロフィール</h2>
-    <div style="display:flex; gap:20px; flex-wrap:wrap;">
-      <div style="flex:1 1 200px; text-align:center;">
-        <img src="https://via.placeholder.com/120" alt="メンバー1" style="border-radius:50%; margin-bottom:10px;">
-        <h3>Member1</h3>
-        <p>サーバー管理 / 建築</p>
+    <dl class="server-specs">
+      <div class="spec-row spec-row--address">
+        <dt>サーバーIP</dt>
+        <dd><code>play.example.com</code></dd>
       </div>
-      <div style="flex:1 1 200px; text-align:center;">
-        <img src="https://via.placeholder.com/120" alt="メンバー2" style="border-radius:50%; margin-bottom:10px;">
-        <h3>Member2</h3>
-        <p>プラグイン / 運営</p>
+      <div class="spec-row"><dt>バージョン</dt><dd>1.20.1</dd></div>
+      <div class="spec-row"><dt>ゲームモード</dt><dd>サバイバル <span>/</span> クリエイティブ</dd></div>
+      <div class="spec-row"><dt>最大プレイヤー数</dt><dd>100人</dd></div>
+      <div class="spec-row"><dt>公式 Discord</dt><dd><a href="#">参加はこちら <span aria-hidden="true">↗</span></a></dd></div>
+    </dl>
+    <span class="panel-index">02 <span>/</span> 05</span>
+  </section>
+
+  <section class="panel panel--left" id="features" aria-labelledby="features-title">
+    <div class="section-heading">
+      <p class="eyebrow">MADE FOR YOUR ADVENTURE <span>02</span></p>
+      <h2 id="features-title">このワールドの楽しみ方</h2>
+    </div>
+    <div class="feature-list">
+      <div class="feature-item"><span class="feature-number">A</span><h3>自由に建築</h3><p>思い描いた場所を、好きなかたちに。</p></div>
+      <div class="feature-item"><span class="feature-number">B</span><h3>定期イベント</h3><p>みんなで集まって楽しむ時間。</p></div>
+      <div class="feature-item"><span class="feature-number">C</span><h3>初心者歓迎</h3><p>はじめてでも安心のサポート。</p></div>
+      <div class="feature-item"><span class="feature-number">D</span><h3>快適な環境</h3><p>プラグインで遊びやすく。</p></div>
+    </div>
+    <span class="panel-index">03 <span>/</span> 05</span>
+  </section>
+
+  <section class="panel panel--right" id="join" aria-labelledby="join-title">
+    <div class="section-heading">
+      <p class="eyebrow">HOW TO JOIN <span>03</span></p>
+      <h2 id="join-title">参加方法</h2>
+      <p class="section-intro">お使いの端末を選んで、ワールドへ。</p>
+    </div>
+    <div class="join-methods">
+      <div class="join-method">
+        <h3><span>01</span> PC版</h3>
+        <ol>
+          <li>Minecraftを起動</li>
+          <li>「マルチプレイ」からサーバーを追加</li>
+          <li>サーバーIPを入力して参加</li>
+        </ol>
+      </div>
+      <div class="join-method">
+        <h3><span>02</span> ゲーム機版</h3>
+        <ol>
+          <li>Minecraftを起動</li>
+          <li>サーバー追加画面を開く</li>
+          <li>サーバーIPを入力して参加</li>
+        </ol>
       </div>
     </div>
-  </div>
+    <span class="panel-index">04 <span>/</span> 05</span>
+  </section>
 
-</div>
+  <section class="panel panel--left panel--team" id="team" aria-labelledby="team-title">
+    <div class="section-heading">
+      <p class="eyebrow">THE PEOPLE BEHIND THE WORLD <span>04</span></p>
+      <h2 id="team-title">運営メンバー</h2>
+    </div>
+    <div class="team-list">
+      <div class="team-member"><span class="member-mark" aria-hidden="true">01</span><div><h3>Member1</h3><p>サーバー管理 / 建築</p></div></div>
+      <div class="team-member"><span class="member-mark member-mark--warm" aria-hidden="true">02</span><div><h3>Member2</h3><p>プラグイン / 運営</p></div></div>
+    </div>
+    <span class="panel-index">05 <span>/</span> 05</span>
+  </section>
+</main>
 
-<script>
-  // アコーディオン
-  document.querySelectorAll('.accordion').forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.classList.toggle('active');
-      const panel = btn.nextElementSibling;
-      panel.style.display = (panel.style.display === "block") ? "none" : "block";
-    });
-  });
-
-  // スライダー
-  const slidesContainer = document.querySelector('.slides');
-  const slides = document.querySelectorAll('.slides img');
-  let index = 0;
-  const total = slides.length;
-  function updateSlider() {
-    const w = slides[0].clientWidth;
-    slidesContainer.style.transform = `translateX(-${index * w}px)`;
-  }
-  document.querySelector('.next').addEventListener('click', () => { index = (index +1)%total; updateSlider(); });
-  document.querySelector('.prev').addEventListener('click', () => { index = (index -1 + total)%total; updateSlider(); });
-  setInterval(()=>{ index = (index +1)%total; updateSlider(); }, 4000);
-  window.addEventListener('resize', updateSlider);
-</script>
+<footer class="site-footer"><span>KKserver</span><span>MINECRAFT PAPER SERVER</span></footer>
 
 </body>
 </html>
