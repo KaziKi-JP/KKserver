@@ -1,0 +1,149 @@
+/* ========= Base ========= */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* ========= Header ========= */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(245, 247, 250, 0.82);
+  backdrop-filter: blur(6px);
+  padding: 18px 28px 14px;
+  border-bottom: 1px solid #e3e5e8;
+  z-index: 50;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+header p {
+  margin: 3px 0 0;
+  font-size: 13px;
+  color: #666;
+}
+
+/* ========= Container ========= */
+.container {
+  max-width: 900px;
+  margin: 100px auto 40px;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ========= Card (meanoniwa風) ========= */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+.card h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: #222;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+/* ========= Accordion ========= */
+.accordion {
+  width: 100%;
+  padding: 14px 20px;
+  background: #f5f7fa;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+.accordion i {
+  transition: transform 0.3s;
+}
+.accordion.active i {
+  transform: rotate(180deg);
+}
+.accordion + .panel {
+  display: none;
+  padding: 12px 20px;
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid #eaeaea;
+  margin-top: 4px;
+}
+
+/* ========= Gallery ========= */
+.slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.slides img {
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.3);
+  border: none;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.prev:hover, .next:hover { background: rgba(0,0,0,0.5); }
+
+/* ========= Button ========= */
+.button {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #007acc;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+.button:hover { background: #005fa3; }
+
+/* ========= Responsive ========= */
+@media (max-width: 600px) {
+  .container { padding: 16px 12px; margin-top: 120px; }
+  header h1 { font-size: 1.8rem; }
+}
