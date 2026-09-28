@@ -64,6 +64,11 @@ header {
   font: 22px Georgia,serif;
 }
 .brand-copy { display: grid; gap: 1px; }
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+/* 全要素の寸法計算とページの基本設定 */
+>>>>>>> Stashed changes
 .brand-name { gap: 10px; }
 .brand h1 {
   margin: 0;
@@ -78,6 +83,11 @@ header {
 .world-index,
 .panel-index,
 .site-footer { font-family: "Trebuchet MS",sans-serif; letter-spacing: .08em; }
+=======
+.brand-name { display: flex; align-items: center; gap: 10px; }
+.brand h1 { margin: 0; font-size: 19px; font-weight: 650; line-height: 1.2; }
+.brand-caption,.eyebrow,.world-label,.world-caption,.world-index,.panel-index,.site-footer { font-family: "Trebuchet MS",sans-serif; letter-spacing: .08em; }
+>>>>>>> parent of b712946 (Add more-info page and CTAs)
 .brand-caption { color: var(--muted); font-size: 9px; }
 .badge {
   padding: 3px 7px;
@@ -137,6 +147,7 @@ header {
 }
 .panel--hero::before { width: 110px; }
 .hero-copy { max-width: 530px; }
+<<<<<<< HEAD
 .link {
   display: inline-flex;
   align-items: center;
@@ -161,6 +172,12 @@ header {
   font-weight: 700;
   line-height: 1.35;
 }
+=======
+.eyebrow { display: flex; align-items: center; gap: 9px; margin: 0 0 14px; color: var(--green); font-size: 10px; font-weight: 700; }
+.eyebrow > span:last-child { margin-left: auto; color: var(--muted); font-weight: 400; }
+.live-dot { width: 7px; aspect-ratio: 1; border-radius: 50%; background: var(--green); box-shadow: 0 0 12px rgba(45,126,81,.24); }
+.hero-copy h2,.section-heading h2 { margin: 0; font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", "Meiryo", "MS Gothic", sans-serif; font-weight: 700; line-height: 1.35; }
+>>>>>>> parent of b712946 (Add more-info page and CTAs)
 .hero-copy h2 { font-size: 38px; }
 .hero-description {
   max-width: 430px;
@@ -231,7 +248,7 @@ header {
 }
 
 .section-heading { margin-bottom: 25px; }
-.section-heading .link { display: inline-flex; margin: 8px 0 0; }
+.section-heading .eyebrow { margin-bottom: 8px; }
 .section-heading h2 { font-size: 27px; }
 .section-intro { margin: 9px 0 0; color: var(--muted); font-size: 13px; }
 .server-specs { margin: 0; border-top: 1px solid var(--line); }
