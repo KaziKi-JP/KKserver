@@ -51,22 +51,19 @@ header {
   padding: 12px 32px;
 }
 .brand,
-/* サイト全体で使うテーマ色と表示モード */
-:root {
 .brand-name { display: flex; align-items: center; }
 .brand { min-width: 0; gap: 12px; }
-  --glass: rgba(255,255,255,.28); /* ガラス風パネルの背景 */
-  --line: rgba(115,130,120,.2); /* 境界線 */
-  --paper: #203027; /* 基本文字色 */
-  --muted: #748078; /* 補助文字色 */
-  --green: #2D7E51; /* アクセントカラー */
-  --silver: #AEB8B1; /* 補助アクセント */
+.brand-mark {
+  display: grid;
+  width: 42px;
+  aspect-ratio: 1;
+  place-items: center;
+  flex: 0 0 auto;
   border: 1px solid rgba(45,126,81,.42);
   color: var(--green);
   font: 22px Georgia,serif;
 }
 .brand-copy { display: grid; gap: 1px; }
-/* 全要素の寸法計算とページの基本設定 */
 .brand-name { gap: 10px; }
 .brand h1 {
   margin: 0;
@@ -84,7 +81,6 @@ header {
 .brand-caption { color: var(--muted); font-size: 9px; }
 .badge {
   padding: 3px 7px;
-/* ヘッダーとブランドナビゲーション */
   border: 1px solid rgba(45,126,81,.35);
   background: rgba(45,126,81,.06);
   color: var(--green);
@@ -154,7 +150,6 @@ header {
 .live-dot {
   width: 7px;
   aspect-ratio: 1;
-/* ページ本文のレイアウト */
   border-radius: 50%;
   background: var(--green);
   box-shadow: 0 0 12px rgba(45,126,81,.24);
@@ -313,7 +308,6 @@ header {
   gap: 11px;
   margin: 15px 0 0;
   padding: 0;
-/* サーバー機能の一覧 */
   color: #526057;
   font-size: 12px;
   list-style: none;
